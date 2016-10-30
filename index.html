@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://code.angularjs.org/1.6.0-rc.0/angular.min.js"></script>    
+    <script src="js/controllers/provinceController.js"></script>
+    <script src="js/directives/provinceCard.js"></script>
+    <script src="js/services/Province.js"></script>
+    <script src="js/app.js"></script>
+    <title>Provinces App</title>      
+  </head>
+  <body>
+      <header>
+			<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header navbar-brand">
+					Provinces App
+				</div>
+			</div>
+			</nav>
+		</header>
+    <div class="container" ng-app="provinceApp">
+    <div class="container-fluid" ng-controller="provinceController as provinceCtrl">
+      <div class="wrapper" ng-app="provinceApp">
+        <province-card ng-repeat = " province in provinceCtrl.provinces" class="col-lg-3 col-xl-3"></province-card>
+      </div>
+    </div>
+    </div>    
+  </body>
+</html>
