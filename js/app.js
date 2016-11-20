@@ -1,4 +1,20 @@
-angular.module("provinceApp",[])
-.controller("provinceController",['Province',provinceController])
-.service("Province",Province)
-.directive("provinceCard",provinceCard);
+(function () {
+  'use strict';
+angular.module("webApp",[])
+    .controller("provinceController",['Province', provinceController])
+    .service("Province",Province)
+    .component('provinceCard', {
+      bindings: {
+          provinces: '='
+      },
+      templateUrl: 'cards/single-province.html'
+    });
+    
+
+    
+    
+    
+    
+}());
+
+

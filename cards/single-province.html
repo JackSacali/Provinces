@@ -1,0 +1,20 @@
+
+<div class="small-card" style="background: #ccc url('{{$ctrl.provinces.image}}'); background-size: 256px 290px;" ng-click="showMe=!showMe" ng-hide ="showMe">
+  <div class="hover">
+    <span class="caption"> {{$ctrl.provinces.name}}</span>
+  </div>
+</div>
+
+
+
+<div class="big-card" ng-click="showMe=!showMe" ng-show="showMe">
+  <div class="main-card" style="background: #ccc url('{{$ctrl.provinces.image}}'); background-size: 532px 600px;">
+    <div class="big-caption">
+        <span class="caption big-title">{{$ctrl.provinces.name}}</span>
+        <h3 title="{{province.capital.description}}">Capital: {{$ctrl.provinces.capital.name}}</h3>
+        <p class="ScrollStyle" style="font-size: 1.5em;">
+          {{$ctrl.provinces.description}}
+        </p>
+    </div>  
+  </div>      
+</div>
